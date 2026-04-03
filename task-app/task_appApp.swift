@@ -1,32 +1,19 @@
-//
-//  task_appApp.swift
-//  task-app
-//
-//  Created by Yunus Çelik on 3/30/26.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
 struct task_appApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @State private var syncManager = SyncManager.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    await StoreKitManager.shared.loadProducts()
+                    await StoreKitManager.shared.updatePurchasedProducts()
+                    syncManager.disableSyncIfNeeded()
+                }
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(syncManager.container)
     }
 }

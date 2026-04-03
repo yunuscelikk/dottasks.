@@ -6,14 +6,79 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0A0AA8902F7B2E6200A67BB7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0AA88F2F7B2E6200A67BB7 /* WidgetKit.framework */; };
+		0A0AA8922F7B2E6200A67BB7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0AA8912F7B2E6200A67BB7 /* SwiftUI.framework */; };
+		0A0AA8A12F7B2E6400A67BB7 /* TaskWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0A0AA88D2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A0AA89F2F7B2E6400A67BB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A0AA8472F7B062000A67BB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A0AA88C2F7B2E6100A67BB7;
+			remoteInfo = TaskWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0A0AA8A62F7B2E6400A67BB7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0A0AA8A12F7B2E6400A67BB7 /* TaskWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A0AA84F2F7B062000A67BB7 /* task-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0AA88D2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0AA88F2F7B2E6200A67BB7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0A0AA8912F7B2E6200A67BB7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0A0AA8AE2F7B2ED800A67BB7 /* TaskWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0A0AA8A22F7B2E6400A67BB7 /* Exceptions for "TaskWidgetExtension" folder in "TaskWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0A0AA88C2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension */;
+		};
+		0A0AA8B02F7B2FA200A67BB7 /* Exceptions for "task-app" folder in "TaskWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Intents/ToggleTaskIntent.swift,
+				Intents/ToggleTimerIntent.swift,
+				Models/TaskItem.swift,
+				Services/WidgetDataManager.swift,
+			);
+			target = 0A0AA88C2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0A0AA8512F7B062000A67BB7 /* task-app */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0A0AA8B02F7B2FA200A67BB7 /* Exceptions for "task-app" folder in "TaskWidgetExtensionExtension" target */,
+			);
 			path = "task-app";
+			sourceTree = "<group>";
+		};
+		0A0AA8932F7B2E6200A67BB7 /* TaskWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0A0AA8A22F7B2E6400A67BB7 /* Exceptions for "TaskWidgetExtension" folder in "TaskWidgetExtensionExtension" target */,
+			);
+			path = TaskWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +91,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A0AA88A2F7B2E6100A67BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A0AA8922F7B2E6200A67BB7 /* SwiftUI.framework in Frameworks */,
+				0A0AA8902F7B2E6200A67BB7 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0A0AA8462F7B062000A67BB7 = {
 			isa = PBXGroup;
 			children = (
+				0A0AA8AE2F7B2ED800A67BB7 /* TaskWidgetExtensionExtension.entitlements */,
 				0A0AA8512F7B062000A67BB7 /* task-app */,
+				0A0AA8932F7B2E6200A67BB7 /* TaskWidgetExtension */,
+				0A0AA88E2F7B2E6200A67BB7 /* Frameworks */,
 				0A0AA8502F7B062000A67BB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +118,18 @@
 			isa = PBXGroup;
 			children = (
 				0A0AA84F2F7B062000A67BB7 /* task-app.app */,
+				0A0AA88D2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0A0AA88E2F7B2E6200A67BB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A0AA88F2F7B2E6200A67BB7 /* WidgetKit.framework */,
+				0A0AA8912F7B2E6200A67BB7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +142,12 @@
 				0A0AA84B2F7B062000A67BB7 /* Sources */,
 				0A0AA84C2F7B062000A67BB7 /* Frameworks */,
 				0A0AA84D2F7B062000A67BB7 /* Resources */,
+				0A0AA8A62F7B2E6400A67BB7 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A0AA8A02F7B2E6400A67BB7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0A0AA8512F7B062000A67BB7 /* task-app */,
@@ -69,6 +158,28 @@
 			productName = "task-app";
 			productReference = 0A0AA84F2F7B062000A67BB7 /* task-app.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0A0AA88C2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A0AA8A32F7B2E6400A67BB7 /* Build configuration list for PBXNativeTarget "TaskWidgetExtensionExtension" */;
+			buildPhases = (
+				0A0AA8892F7B2E6100A67BB7 /* Sources */,
+				0A0AA88A2F7B2E6100A67BB7 /* Frameworks */,
+				0A0AA88B2F7B2E6100A67BB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0A0AA8932F7B2E6200A67BB7 /* TaskWidgetExtension */,
+			);
+			name = TaskWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = TaskWidgetExtensionExtension;
+			productReference = 0A0AA88D2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +192,9 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					0A0AA84E2F7B062000A67BB7 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					0A0AA88C2F7B2E6100A67BB7 = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -100,12 +214,20 @@
 			projectRoot = "";
 			targets = (
 				0A0AA84E2F7B062000A67BB7 /* task-app */,
+				0A0AA88C2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A0AA84D2F7B062000A67BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A0AA88B2F7B2E6100A67BB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +244,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A0AA8892F7B2E6100A67BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A0AA8A02F7B2E6400A67BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A0AA88C2F7B2E6100A67BB7 /* TaskWidgetExtensionExtension */;
+			targetProxy = 0A0AA89F2F7B2E6400A67BB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A0AA85A2F7B062200A67BB7 /* Debug */ = {
@@ -251,16 +388,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "task-app/task-app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GRF5PZBQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DotTasks;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Add tasks to Apple Reminders and sync completion status.";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Add tasks to Apple Reminders and sync completion status.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -283,16 +428,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "task-app/task-app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6GRF5PZBQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DotTasks;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSRemindersFullAccessUsageDescription = "Add tasks to Apple Reminders and sync completion status.";
+				INFOPLIST_KEY_NSRemindersUsageDescription = "Add tasks to Apple Reminders and sync completion status.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +456,68 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0A0AA8A42F7B2E6400A67BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GRF5PZBQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "celik.task-app.TaskWidgetExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A0AA8A52F7B2E6400A67BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GRF5PZBQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "celik.task-app.TaskWidgetExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +542,15 @@
 			buildConfigurations = (
 				0A0AA85D2F7B062200A67BB7 /* Debug */,
 				0A0AA85E2F7B062200A67BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A0AA8A32F7B2E6400A67BB7 /* Build configuration list for PBXNativeTarget "TaskWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A0AA8A42F7B2E6400A67BB7 /* Debug */,
+				0A0AA8A52F7B2E6400A67BB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
